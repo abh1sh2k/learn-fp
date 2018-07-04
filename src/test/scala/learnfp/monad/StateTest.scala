@@ -20,7 +20,7 @@ class StateTest extends WordSpecLike with Matchers {
           z <- 30.pure[StringState]
           _ <- State.get[String] >>= { ns => State.put(ns + " baam") }
         } yield {x + y + z}
-      }.run("boom") shouldBe ("boom boom baam", 10 + 20 + 30)
+      }.run("boom boom baam") shouldBe ("boom boom baam", 10 + 20 + 30)
     }
   }
 }

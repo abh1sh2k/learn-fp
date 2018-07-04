@@ -13,6 +13,7 @@ import learnfp.monoid.ListMonoid._
 class WriterTest extends WordSpecLike with Matchers {
   "writer monad" should {
     "work" in {
+      val s : Int = 3
       type WriterString[A] = Writer[List[String], A];
       {
         for {
